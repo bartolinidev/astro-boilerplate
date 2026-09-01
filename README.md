@@ -15,12 +15,24 @@
   - **Smart Sticky Header:** Scroll-aware header that hides on scroll-down.
   - **Scroll-Triggered Animations**: Stylish entry animations setter powered by Intersection Observer API.
 
-## 🛠️ How to start?
+  <br>
 
-1. Clone the repo: `git clone [your-link]`
-2. Install dependencies: `npm install`
-3. Launch Dev Server: `npm run dev`
-4. Access Admin UI: Go to `http://localhost:4321/keystatic` to manage content.
+## 🚀 Getting Started
+
+Clone the repository & run live server:
+
+```bash
+git clone [your-link]
+cd [project-folder]
+npm install
+npm run dev
+```
+
+Open the Admin UI:
+
+```bash
+http://localhost:4321/keystatic
+```
 
 <br>
 
