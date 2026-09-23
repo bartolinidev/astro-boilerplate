@@ -4,39 +4,48 @@
   src: url() format('woff2');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'headings-font';
   src: url() format('woff2');
   font-display: swap;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 a {
   text-decoration: none;
   cursor: pointer;
   color: var(--font);
 }
+
 a:visited {
   color: inherit;
 }
+
 button {
   cursor: pointer;
   color: var(--font);
   background: transparent;
   border: none;
 }
+
 svg {
   color: var(--font);
   fill: currentColor;
 }
+
 /* ======================================= */
 /* ROOT & BODY & HEADINGS FONTS ========= */
 /* ===================================== */
+
 :root {
   --space-base: 4px;
 
@@ -51,12 +60,14 @@ svg {
   --font-heading:
     'headings-font', 'Inter', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
+
 body {
   -webkit-tap-highlight-color: transparent;
   text-wrap: pretty;
   line-height: 1.5;
   font-family: var(--font-body);
 }
+
 h1,
 h2,
 h3,
@@ -65,52 +76,53 @@ h5,
 h6 {
   font-family: var(--font-heading);
 }
-/* ======================================= */
-/* DARK-MODE============================= */
-/* ===================================== */
-[data-theme='dark'] {
-  /* Remember to set below colors or remove block if not using dark/light mode */
-  --bg: ;
-  --bg-light: ;
-}
+
 /* ======================================= */
 /* HOVER ================================ */
 /* ===================================== */
+
 @media (hover: hover) {
 }
+
 /* ======================================= */
 /* RESPONSIVE-MEDIA-QUERIES ============= */
 /* ===================================== */
-@media (max-width: 1024px) {
+
+@media (min-width: 768px) {
 }
 
-@media (max-width: 768px) {
-}
-
-@media (max-width: 360px) {
+@media (min-width: 1024px) {
 }
 
 @media (min-width: 1920px) {
 }
+
 /* ======================================= */
 /* ANIMATIONS =========================== */
 /* ===================================== */
+
 .animate-once {
   transform: translateY(30px);
   transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   will-change: transform;
 }
+
 .animate-once.show {
   transform: translateY(0);
 }
+
 /* ======================================= */
 /* REDUCED-MOTION ======================= */
 /* ===================================== */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  * {
+  
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
