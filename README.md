@@ -4,7 +4,24 @@
 
 <br>
 
-## 💡 Why this boilerplate?
+## 📋 Table Of Contents
+
+- [Why this boilerplate?](#-why-this-boilerplate)
+- [Getting Started](#-getting-started)
+- [Structure of the boilerplate](#-structure-of-the-boilerplate)
+- [Dependency management \& compatibility](#-dependency-management--compatibility)
+- [Configuration](#️-configuration)
+  - [Sitemap integration](#️-sitemap-integration)
+  - [Sync Astro content collections with Keystatic UI](#-sync-astro-content-collections-with-keystatic-ui)
+  - [Layout and components](#-layout-and-components)
+  - [Menu (navigation \& header)](#-menu-navigation--header)
+  - [Dark mode toggling](#-dark-mode-toggling)
+  - [Carousel component](#-carousel-component)
+  - [Accordion component](#-accordion-component)
+
+<br>
+
+## 💡 Why This Boilerplate?
 
 - **Headless CMS Integration:** Pre-configured for [Keystatic](https://keystatic.com/), offering a seamless local-first editing experience.
 - **Built-in Component Library:** Ready for personalization and high-performance builds:
@@ -36,7 +53,7 @@ http://localhost:4321/keystatic
 
 <br>
 
-## 🧱 Structure of the boilerplate
+## 🧱 Structure Of The Boilerplate
 
 ```
 ├── src/
@@ -68,7 +85,7 @@ http://localhost:4321/keystatic
 
 <br>
 
-## 🤖 Dependency management & compatibility
+## 🤖 Dependency Management & Compatibility
 
 This boilerplate is pre-configured with [Dependabot](https://github.com/dependabot) to keep your project secure and up to date through weekly automated dependency checks.
 
@@ -76,11 +93,11 @@ This boilerplate is pre-configured with [Dependabot](https://github.com/dependab
 <br>
 <br>
 
-# ⚙️ Configuration
+## ⚙️ Configuration
 
 <br>
 
-## 🗺️ Sitemap integration
+### 🗺️ Sitemap Integration
 
 This boilerplate includes the `@astrojs/sitemap` integration. To generate a valid `sitemap-index.xml`, you **must manually update the** `site` property in the `astro.config.mjs` file with your production URL.
 
@@ -101,7 +118,7 @@ export default defineConfig({
 
 <br>
 
-## 🔄 Sync Astro content collections with Keystatic UI
+### 🔄 Sync Astro Content Collections With Keystatic UI
 
 Collections in `src/content.config.ts` must match collections in `keystatic.config.ts`. **These files need to be adapted to your project's specific needs.** Check [Keystatic docs](https://keystatic.com/docs/introduction) for more information.
 
@@ -111,7 +128,7 @@ The provided demo uses `src/pages/[...slug].astro` to render pages dynamically. 
 
 <br>
 
-## 🧩 Layout and components
+### 🧩 Layout And Components
 
 This boilerplate has `src/layouts/BaseLayout.astro` with nested `<Head />` component. This layout can serve as container for all the pages within your project. It takes props: `lang` (`'en'` by default), `title`, `description` and `ogImgUrl` (`'/ogp-image.jpg'` by default).
 
@@ -167,7 +184,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <br>
 
-## 📑 Menu (navigation & header)
+### 📑 Menu (Navigation & Header)
 
 The `navLinks` array within `src/components/Navigation.astro` should be populated with labels and their corresponding `href` paths. The component automatically detects the active page based on the URL and applies the `.current` class. It also supports an `external` property which, if set to `true`, appends an external link icon.
 
@@ -212,7 +229,7 @@ import logo from './assets/logo.webp'
 
 <br>
 
-## 🌙 Dark mode toggling
+### 🌙 Dark Mode Toggling
 
 To prevent [FOUC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content), a blocking script is included in the `<Head />` component. It's useful especially when using dark color scheme to avoid flash of white page while loading page. For this reason, `<Head />` is an integral part of `src/layouts/BaseLayout.astro`.
 
@@ -246,7 +263,7 @@ const colorSchemeBtn = document.querySelector('.theme-toggle-btn');
 
 <br>
 
-## 🎡 Carousel component
+### 🎡 Carousel Component
 
 There are 2 modes of carousel in this boilerplate: one for pictures (`src/components/CarouselPics.astro`) and one for rich content (`src/components/CarouselOther.astro`). Both act as containers and must be populated with their respective slide components: `CarouselPicSlide.astro` or `CarouselOtherSlide.astro`.
 
@@ -298,7 +315,7 @@ import CarouselOtherSlide from '../components/CarouselOtherSlide.astro';
 
 <br>
 
-## 🪗 Accordion component
+### 🪗 Accordion Component
 
 The Accordion is styled within its own `<style>` tag. Accordion items require a `title` (displayed on the toggle bar) and are containers for `<slot />` of any kind.
 
